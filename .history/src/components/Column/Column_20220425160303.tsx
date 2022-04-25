@@ -20,7 +20,6 @@ export const Column = ({text, children, id}: ColumnProps) => {
       <ColumnTitle>{text}</ColumnTitle>
         {tasks.map((task)=> (
             <Card 
-            key={task.id}
             text={task.text} 
             id={task.id} 
             />

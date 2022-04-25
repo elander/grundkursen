@@ -14,7 +14,7 @@ function App() {
   return (
     <AppContainer>
       {lists.map((list) => (
-        <Column key={list.id} text={list.text} id={list.id} />
+        <Column text={list.text} id={list.id} />
       ))}
       <AddNewItem
       toggleButtonText='Add column'

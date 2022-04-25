@@ -9,12 +9,12 @@ import { addList } from './state/actions';
 import { useAppState } from './state/AppStateContext';
 
 function App() {
-  const {lists, dispatch} = useAppState();
+  const {lists} = useAppState();
 
   return (
     <AppContainer>
       {lists.map((list) => (
-        <Column key={list.id} text={list.text} id={list.id} />
+        <Column text={list.text} id={list.id} />
       ))}
       <AddNewItem
       toggleButtonText='Add column'
