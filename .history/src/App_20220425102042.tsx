@@ -7,14 +7,17 @@ import {
   ColumnTitle
 } from './styles';
 
-import { Column } from './components/Column/Column';
 import React from 'react';
 
 function App() {
 
   return (
     <AppContainer>
-      <Column text='Testkolumn' />
+      <ColumnContainer>
+      <ColumnTitle>Första kolumnen</ColumnTitle>
+      <Card>Första kortet</Card>
+      <Card>Andra kortet</Card>
+      </ColumnContainer>
     </AppContainer>
   );
 }
