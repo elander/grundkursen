@@ -7,9 +7,9 @@ import {
   ColumnTitle
 } from './styles';
 
-import { AddNewItem } from './components/AddNewItem/AddNewItem';
 import { Column } from './components/Column/Column';
 import React from 'react';
+import { AddNewItem } from './components/AddNewItem/AddNewItem';
 
 function App() {
 
@@ -19,7 +19,6 @@ function App() {
       <AddNewItem
       toggleButtonText='Add column'
       onAdd={console.log}
-      />
     </AppContainer>
   );
 }

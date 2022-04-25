@@ -20,5 +20,6 @@ export const Column = ({text}: ColumnProps) => {
       dark
       />
       </ColumnContainer>
+      
     )
 };

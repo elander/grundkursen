@@ -1,6 +1,5 @@
 import { ColumnContainer, ColumnTitle } from "../../styles";
 
-import { AddNewItem } from "../AddNewItem/AddNewItem";
 import { Card } from "../Card/Card";
 
 type ColumnProps = {
@@ -14,11 +13,7 @@ export const Column = ({text}: ColumnProps) => {
       <ColumnTitle>{text}</ColumnTitle>
       <Card text="Första 'riktiga' kortet" />
       <Card text="Andra kortet" />
-      <AddNewItem
-      toggleButtonText="Add Card"
-      onAdd={console.log}
-      dark
-      />
       </ColumnContainer>
+      
     )
 };
