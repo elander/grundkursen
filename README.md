@@ -103,3 +103,20 @@ Installera nanoid för att generera hyfsat unika id
 Installera use-immer för att kunna använda Immer för icke-muterbara variabler (typ vårt globala tillstånd) och useImmerReducer för att göra reducern enklare.
 
 https://immerjs.github.io/immer/example-setstate
+
+Flytta saker: generiska typer i TypeScript för moveItem:
+https://www.typescriptlang.org/docs/handbook/2/generics.html
+
+Installera react-dnd:
+https://react-dnd.github.io/react-dnd/about
+
+https://react-dnd.github.io/react-dnd/docs/api/use-drag
+
+Sida med bra tips för tester:
+https://kentcdodds.com/blog/write-tests
+
+Dokumentation till react-testing-library (som ingår i React):
+https://testing-library.com/docs/
+
+Higher Order Components för att ladda data
+https://reactjs.org/docs/higher-order-components.html
