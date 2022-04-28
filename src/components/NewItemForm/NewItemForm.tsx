@@ -8,6 +8,10 @@ type NewItemFormProps = {
 };
 
 export const NewItemForm = ({onAdd}: NewItemFormProps) => {
+    // useFocus har vi fixat själva, en hook som kombinerar
+    // Reacts "useRef" och "useEffect" för att dels returnera en
+    // referens vi kan använda för att märka ut vår input
+    // och dels sätta fokus i den märkta inputen när den visas
     const inputRef = useFocus();
     const [text, setText] = useState("");
 

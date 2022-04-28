@@ -1,5 +1,8 @@
 import { AppState } from "../state/appStateReducer";
 
+// Den här funktionen anropas via en useEffect-hook i "withInitialState"
+// för att hämta vårt globala tillstånd när appen startar,
+// och efter varje save i 
 export const load = () => {
     return fetch('http://localhost:4000/load').then((response) => {
         if(response.ok) {
@@ -10,7 +13,8 @@ export const load = () => {
     });
 }
 
-
+// Den här funktionen anropas av AppStateContext, för att lagra innehåll
+// varje gång AppState ändras så att vi "lagrar" det i backend.
 export const save = (
     payload: AppState
     ) => {

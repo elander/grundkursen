@@ -9,6 +9,12 @@ type InjectedProps = {
 
 type PropsWithoutInjected<TBaseProps> = Omit<TBaseProps, keyof InjectedProps>;
 
+
+// Detta är en så kallad "higher order component", som vi använder
+// för att injicera grundtillståndet, som hämtas från backend när vi
+// startar appen.
+// Det finns en länk till en sida som förklarar konceptet med higher
+// order components i ReadMe-filen
 export function withInitialState<TProps>(
     WrappedComponent: React.ComponentType<
         PropsWithoutInjected<TProps> & InjectedProps

@@ -12,9 +12,14 @@ import { useRef } from "react";
 type ColumnProps = {
     id: string
     text: string
-    children?: React.ReactNode
+    children?: React.ReactNode 
     isPreview?: boolean
 };
+
+// det mesta här känns igen från Card, jämför med den filen
+// det som skiljer är i princip att vi här också hämtar ut
+// funktionen getTasksByListId från AppState. Den behöver vi
+// för att veta vilken array med tasks vi ska visa
 
 export const Column = ({text, children, id, isPreview}: ColumnProps) => {
     const {draggedItem , getTasksByListId, dispatch} = useAppState();

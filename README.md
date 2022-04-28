@@ -120,3 +120,9 @@ https://testing-library.com/docs/
 
 Higher Order Components för att ladda data
 https://reactjs.org/docs/higher-order-components.html
+
+Blogg om varför det är en bra idé att dela komponenter i två delar, en utseendedel (styles.ts) och en "funktionsdel", som vi gjort…
+
+https://felixgerschau.com/react-hooks-separation-of-concerns/
+
+(Han har ett ganska bra nyhetsbrev också!)

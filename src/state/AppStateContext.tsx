@@ -4,7 +4,7 @@ import {
      Task,
      appStateReducer,
 } from "./appStateReducer";
-import { Dispatch, FC, createContext, useContext, useEffect } from "react";
+import { Dispatch, createContext, useContext, useEffect } from "react";
 
 import { Action } from "./actions";
 import { DragItem } from "../utils/DragItem";
@@ -12,6 +12,7 @@ import { save } from "../api/api";
 import { useImmerReducer } from "use-immer";
 import { withInitialState } from "./withInitialState";
 
+// en konstant vi hade för grundtillståndet innan vi skapade en backend:
 export const appData = {
     draggedItem: null,
     lists: [
@@ -46,6 +47,10 @@ type AppStateContextProps = {
     dispatch: Dispatch<Action>
 };
 
+// Detta skapar en "context", som vi använder för att skapa
+// en provider, som vi sedan använder för att omsluta alla
+// komponenter som behöver komma åt att läsa och skriva i vår
+// globala AppState
 const AppStateContext = 
     createContext<AppStateContextProps>({} as AppStateContextProps);
 
@@ -54,6 +59,7 @@ type AppStateProviderProps = {
     initialState: AppState;
 };
 
+// Här är själva providern:
 export const AppStateProvider = withInitialState<AppStateProviderProps>( 
     ({ children, initialState }) => {
         const [state, dispatch] = useImmerReducer(appStateReducer, initialState)
@@ -75,6 +81,9 @@ export const AppStateProvider = withInitialState<AppStateProviderProps>(
 
     })
 
+    // detta är en egen hook vi skapar för att slippa hålla reda på 
+    // vilken context vi använder när vi behöver komma åt att läsa eller
+    // skriva i vårt AppState
 export const useAppState = () => {
     return useContext(AppStateContext);
 }

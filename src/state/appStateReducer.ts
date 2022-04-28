@@ -20,6 +20,13 @@ export type AppState = {
     draggedItem: DragItem | null
 }
 
+// Detta är funktionen som skriver till AppState,
+// fast när vi använder den så kapslar vi in den
+// i "useImmerReducer", vilket gör att vi kan koda
+// som om vi ändrade direkt i state, utan att skapa
+// en kopia först, som man ska. Det fixar "useImmerReducer"
+// åt oss, du ser hur vi använder "useImmerReducer" på rad
+// 65 i AppStateContext
 export const appStateReducer = (
     draft: AppState,
     action: Action

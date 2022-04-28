@@ -1,7 +1,19 @@
+// "bra att ha"-funktioner för att mecka med arrayer.
+// Vi behövde dem för att kunna flytta listor hit och dit,
+// och för att flytta tasks inom och mellan listor
+
 type Thing = {
     id: string;
 }
 
+// Här gör vi en intressant fint med typescript:
+// Vi har definierat "Thing" ovanför, och här säger
+// vi att den array vi tar emot ska innehålla saker 
+// som åtminstone innehåller alla properties som Thing
+// har, dvs åtminstone ett "id" av typen string.
+// De kan få ha vilka andra properties som helst utöver det,
+// men de får inte sakna ett "id" av typen string. Det
+// är det som "extends" betyder här.
 export const findItemIndexById =
 <TItem extends Thing>(
     items: TItem[],

@@ -1,5 +1,6 @@
 import { DragItem } from "../utils/DragItem";
 
+// en type som definierar alla actions som reducern behöver hantera:
 export type Action = 
 | {
     type: "ADD_LIST",
@@ -33,6 +34,9 @@ export type Action =
     }
 };   
 
+// nedanför har vi funktioner som skapar actions med rätt värden 
+// i "type" och "payload" så att reducern kan hantera dem rätt
+// när vi skickar in dem via "dispatch" (reducern är appStateReducer)
 export const moveTask = (
     draggedItemId: string,
         hoveredItemId: string,
