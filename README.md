@@ -126,3 +126,10 @@ Blogg om varför det är en bra idé att dela komponenter i två delar, en utsee
 https://felixgerschau.com/react-hooks-separation-of-concerns/
 
 (Han har ett ganska bra nyhetsbrev också!)
+
+Jag har lagt till en extra devdependeny, nämligen dependency-cruiser, som skapar bilder som visar hur olika komponenter beror av varandra. Du kan se resultatet i bilden dependencygraph.png (en vektorversion i dependencygraph.svg).
+![dependencygraph.png](./dependencygraph.png)
+
+Här kan du läsa mer om dependency_cruiser:
+
+https://github.com/sverweij/dependency-cruiser
